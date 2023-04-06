@@ -10,7 +10,7 @@
 <hr>
 
 <form class="bg-light p-2 m-2" method="post" asp-page="ContactRequest">
-    <input name="UserID">
+    <input asp-for="@Model.UserId">
 
     <button class="btn btn-danger" type="submit">Gửi</button>
 </form>
