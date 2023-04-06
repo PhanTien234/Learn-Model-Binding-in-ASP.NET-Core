@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 public class ContactRequestModel : PageModel{
-    [BindProperty(SupportsGet = true)]
+    [BindProperty]
     public string UserId {get;set;}
     [BindProperty]
     public string Email {get;set;}
-    [BindProperty(SupportsGet = true)]
+    [BindProperty]
     public string UserName {get; set;}
 
     private readonly ILogger<ContactRequestModel> _logger;
