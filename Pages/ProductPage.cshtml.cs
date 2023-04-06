@@ -27,5 +27,27 @@ namespace pagemodelexample.Pages
             }
             
         }
+
+        // /product/{id:int?}?handle=lastproduct
+        public IActionResult OnGetLastProduct(){
+            ViewData["Title"] = $"San pham cuoi";
+            product = productService.AllProducts().LastOrDefault();
+            if(product != null){
+                return Page();
+            }else{
+                return this.Content("Khong thay san pham");
+            }
+        }
+
+        public IActionResult OnGetRemoveAll(){
+            productService.AllProducts().Clear();
+
+            return RedirectToPage("ProductPage");
+        }
+
+        public IActionResult OnGetLoad(){
+            productService.LoadProducts();
+            return RedirectToPage("ProductPage");
+        }
     }
 }
