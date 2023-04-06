@@ -62,4 +62,14 @@ namespace pagemodelexample
     dùng lệnh dotnet new page để  tạo ra trang mới
     -ProductPage
     dotnet new page -n ProductPage -o Pages 
+
+    - Model Binding: là cơ chế liên kết dữ liệu xuất phát từ nhiều nguồn
+    Dữ liệu gửi đến: (key, value)
+    Nguồn:
+    - Form HTML (post): HttpRequest.Form["key]
+    - Query (form html -get):  HttpRequest.Query["key]
+    - Header:  HttpRequest.Header["key]
+    - Route Data:  HttpRequest.RouteValues["key]
+    - Upload file
+    Đọc dữ liệu gửi đến: HttpRequest (Controller, PageModel, View)
 */

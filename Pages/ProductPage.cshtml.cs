@@ -19,6 +19,17 @@ namespace pagemodelexample.Pages
         public Product product {set;get;}
         public void OnGet(int? id)
         {
+            // var data = this.Request.Form["id"];
+            // var data = this.Request.Query["id"];
+            // var data = this.Request.RouteValues["id"];
+            // var data = this.Request.Headers["id"];
+
+            var data = this.Request.RouteValues["id"];
+            if(data!=null){
+                Console.WriteLine(data.ToString());
+            }
+
+
             if ( id != null){
                 ViewData["Title"] = $"Sản phẩm (ID = {id.Value})";
                 product = productService.Find(id.Value);
