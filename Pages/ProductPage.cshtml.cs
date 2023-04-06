@@ -28,8 +28,10 @@ namespace pagemodelexample.Pages
         // [FromBody]
 
 
-        public void OnGet([FromQuery(Name = "sanpham")]int? id)
+        public void OnGet(int? id, Product sanpham)
         {
+            Console.WriteLine($"ID: {sanpham.Id}");
+            Console.WriteLine($"ID: {sanpham.Name}");
             // var data = this.Request.Form["id"];
             // var data = this.Request.Query["id"];
             // var data = this.Request.RouteValues["id"];
