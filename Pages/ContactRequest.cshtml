@@ -13,6 +13,7 @@
     <div class="mb-3">
         <label class="form-lable" asp-for="UserId"></label>
         <input class="form-control" asp-for="@Model.UserId">
+        <span class="text-danger" asp-validation-for="UserId"></span>
     </div>
 
     <button class="btn btn-danger" type="submit">Gửi</button>
