@@ -16,6 +16,20 @@
         <span class="text-danger" asp-validation-for="UserId"></span>
     </div>
 
+        
+    <div class="mb-3">
+        <label class="form-lable" asp-for="Email"></label>
+        <input class="form-control" asp-for="@Model.Email">
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+       
+        
+    <div class="mb-3">
+        <label class="form-lable" asp-for="UserName"></label>
+        <input class="form-control" asp-for="@Model.UserName">
+        <span class="text-danger" asp-validation-for="UserName"></span>
+    </div>
+
     <button class="btn btn-danger" type="submit">Gửi</button>
 </form>
 
