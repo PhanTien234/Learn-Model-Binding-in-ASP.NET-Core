@@ -28,7 +28,7 @@ namespace pagemodelexample.Pages
         // [FromBody]
 
 
-        public void OnGet(int? id, Product sanpham)
+        public void OnGet(int? id, [Bind("Id","Name")]Product sanpham)
         {
             Console.WriteLine($"ID: {sanpham.Id}");
             Console.WriteLine($"ID: {sanpham.Name}");
