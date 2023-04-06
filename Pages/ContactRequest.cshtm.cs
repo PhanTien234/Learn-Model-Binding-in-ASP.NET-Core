@@ -1,10 +1,12 @@
 
+using System.ComponentModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 public class ContactRequestModel : PageModel{
     [BindProperty]
-    public string UserId {get;set;}
+    [DisplayName("Id cua ban")]
+    public int UserId {get;set;}
     [BindProperty]
     public string Email {get;set;}
     [BindProperty]
