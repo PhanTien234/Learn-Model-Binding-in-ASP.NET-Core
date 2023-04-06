@@ -1,11 +1,13 @@
 
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 public class ContactRequestModel : PageModel{
+    [BindProperty(SupportsGet = true)]
     public string UsedId {get;set;}
-
+    [BindProperty]
     public string Email {get;set;}
-
+    [BindProperty]
     public string UserName {get; set;}
 
     private readonly ILogger<ContactRequestModel> _logger;

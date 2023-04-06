@@ -78,4 +78,5 @@ namespace pagemodelexample
     * Parameter Binding:
 
     * property Binding:
+       [BindProperty] - Mặc định thì property Binding ko sử dụng ở phương thức Get mà nó sử dụng ở phương thức Post
 */
