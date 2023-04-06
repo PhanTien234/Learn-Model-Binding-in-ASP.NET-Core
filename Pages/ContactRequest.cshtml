@@ -1,16 +1,12 @@
 @page
 
+@model Contact
+
 @{
     ViewData["Title"] = "LIEN HE";
 }
 <h1 class="display-4">Trang lien he</h1>
 <p class="lead">Dien cac thong tin lien he</p>
 <hr>
-@UserId
-@Tong(11, 11.12)
-@functions{
-    public string UserId {set;get;} = "ID User ...";
-    public double Tong(double a, double b){
-        return a + b;
-    }
-}
+@Model.UsedId
+@Model.Tong(11, 11.12)
