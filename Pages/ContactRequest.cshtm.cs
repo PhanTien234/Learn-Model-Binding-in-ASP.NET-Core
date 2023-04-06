@@ -27,4 +27,8 @@ public class ContactRequestModel : PageModel{
     public double Tong(double a, double b){
         return a + b;
     }
+
+    public void OnPost(){
+        Console.WriteLine(this.Email);
+    }
 }
