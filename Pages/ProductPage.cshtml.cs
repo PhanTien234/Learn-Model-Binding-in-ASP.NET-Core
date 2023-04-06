@@ -17,17 +17,29 @@ namespace pagemodelexample.Pages
         //void IActionResult
 
         public Product product {set;get;}
-        public void OnGet(int? id)
+        // Nếu chỉ muốn đọc từng cái thì sử dụng từng thuộc tính sau:
+        //Đọc từ Query thì dùng:
+        // [FromQuery]
+        // //doc tu Route thi dung
+        // [FromRoute]
+
+        // [FromForm]
+        // [FromHeader]
+        // [FromBody]
+
+
+        public void OnGet([FromQuery]int? id)
         {
             // var data = this.Request.Form["id"];
             // var data = this.Request.Query["id"];
             // var data = this.Request.RouteValues["id"];
             // var data = this.Request.Headers["id"];
 
-            var data = this.Request.RouteValues["id"];
-            if(data!=null){
-                Console.WriteLine(data.ToString());
-            }
+            // var data = this.Request.Query["id"];
+            // if(!string.IsNullOrEmpty(data)){
+            //     Console.WriteLine(data.ToString());
+            //     int.Parse(data.ToString());
+            // }
 
 
             if ( id != null){

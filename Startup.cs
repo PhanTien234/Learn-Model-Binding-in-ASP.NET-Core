@@ -72,4 +72,8 @@ namespace pagemodelexample
     - Route Data:  HttpRequest.RouteValues["key]
     - Upload file
     Đọc dữ liệu gửi đến: HttpRequest (Controller, PageModel, View)
+
+    -Attribute: Parameter Binding, Property Binding
+
+    * Parameter Binding:
 */
