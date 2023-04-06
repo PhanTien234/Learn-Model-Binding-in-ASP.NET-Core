@@ -12,11 +12,10 @@ namespace pagemodelexample.Pages
 
         //OnGet, OnPos, OnGetAbc... Http Request
         //void IActionResult
-        public void OnGet()
+        public void OnGet(int? id)
         {
-            if (Request.RouteValues["id"] != null){
-                int id = int.Parse(Request.RouteValues["id"].ToString());
-                ViewData["Title"] = $"Sản phẩm (ID = {id})";
+            if ( id != null){
+                ViewData["Title"] = $"Sản phẩm (ID = {id.Value})";
             }else{
                 ViewData["Title"] = $"Danh sach san pham";
             }
