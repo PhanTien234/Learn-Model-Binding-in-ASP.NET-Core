@@ -58,4 +58,7 @@ namespace pagemodelexample
 /*
     PageModel, Model Binding
     Model Binding: là cơ chế ánh xạ liên kết dữ liệu giữa View và Model
+    dùng lệnh dotnet new page để  tạo ra trang mới
+    -ProductPage
+    dotnet new page -n ProductPage -o Pages 
 */
