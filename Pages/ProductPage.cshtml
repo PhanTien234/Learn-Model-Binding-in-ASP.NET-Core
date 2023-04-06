@@ -12,4 +12,19 @@
     <h2>@product.Name</h2>
     <p>Mo ta: @product.Description</p>
     <p>Gia: @product.Price</p>
+
+    <p>
+        <a asp-page="ProductPage" asp-route-id="">Danh sach san pham</a>
+    </p>
+}else{
+    <ul>
+        @foreach (var p in products)
+        {
+            <li>
+                <a asp-page="ProductPage" asp-route-id="@p.Id">
+                    @p.Name
+                </a>
+            </li>
+        }
+    </ul>
 }
