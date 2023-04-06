@@ -28,7 +28,7 @@ namespace pagemodelexample.Pages
         // [FromBody]
 
 
-        public void OnGet([FromQuery]int? id)
+        public void OnGet([FromQuery(Name = "sanpham")]int? id)
         {
             // var data = this.Request.Form["id"];
             // var data = this.Request.Query["id"];
