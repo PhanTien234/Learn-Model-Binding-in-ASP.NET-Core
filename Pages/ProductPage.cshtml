@@ -16,6 +16,11 @@
     <p>
         <a asp-page="ProductPage" asp-route-id="">Danh sach san pham</a>
     </p>
+<form method="post" asp-page="ProductPage" asp-page-handler="delete"
+        asp-route-id="@product.Id">
+        <button type="submit" class="btn btn-danger">Xoa</button>
+</form>
+
 }else{
     <ul>
         @foreach (var p in products)

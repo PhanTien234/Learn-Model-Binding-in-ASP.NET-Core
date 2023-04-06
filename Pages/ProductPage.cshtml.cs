@@ -49,5 +49,16 @@ namespace pagemodelexample.Pages
             productService.LoadProducts();
             return RedirectToPage("ProductPage");
         }
+
+        public IActionResult OnPostDelete(int? id){
+            if(id != null){
+                product = productService.Find(id.Value);
+                if(product != null){
+                    productService.AllProducts().Remove(product);
+                }
+            }
+
+            return this.RedirectToPage("ProductPage", new{id = string.Empty});
+        }
     }
 }
