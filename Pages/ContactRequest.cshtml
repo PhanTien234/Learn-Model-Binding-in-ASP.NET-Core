@@ -1,4 +1,4 @@
-@page
+@page "contact.html"
 
 @model ContactRequestModel
 
@@ -8,5 +8,13 @@
 <h1 class="display-4">Trang lien he</h1>
 <p class="lead">Dien cac thong tin lien he</p>
 <hr>
-@Model.UsedId
-@Model.Tong(11, 11.12)
+
+<div class="alert alert-danger">
+    <p>Thong tin User</p>
+    <ul>
+        <li>UserID: @Model.UsedId</li>
+        <li>Email: @Model.Email</li>
+        <li>UserName: @Model.UserName</li>
+    </ul>
+
+</div>

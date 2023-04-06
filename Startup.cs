@@ -76,4 +76,6 @@ namespace pagemodelexample
     -Attribute: Parameter Binding, Property Binding
 
     * Parameter Binding:
+
+    * property Binding:
 */
