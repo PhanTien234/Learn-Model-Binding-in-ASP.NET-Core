@@ -11,23 +11,23 @@
 
 <form class="bg-light p-2 m-2" method="post" asp-page="ContactRequest">
     <div class="mb-3">
-        <label class="form-lable" asp-for="UserId"></label>
-        <input class="form-control" asp-for="@Model.UserId">
-        <span class="text-danger" asp-validation-for="UserId"></span>
+        <label class="form-lable" asp-for="usercontact.UserId"></label>
+        <input class="form-control" asp-for="@Model.usercontact.UserId">
+        <span class="text-danger" asp-validation-for="usercontact.UserId"></span>
     </div>
 
         
     <div class="mb-3">
-        <label class="form-lable" asp-for="Email"></label>
-        <input class="form-control" asp-for="@Model.Email">
-        <span class="text-danger" asp-validation-for="Email"></span>
+        <label class="form-lable" asp-for="usercontact.Email"></label>
+        <input class="form-control" asp-for="@Model.usercontact.Email">
+        <span class="text-danger" asp-validation-for="usercontact.Email"></span>
     </div>
        
         
     <div class="mb-3">
-        <label class="form-lable" asp-for="UserName"></label>
-        <input class="form-control" asp-for="@Model.UserName">
-        <span class="text-danger" asp-validation-for="UserName"></span>
+        <label class="form-lable" asp-for="usercontact.UserName"></label>
+        <input class="form-control" asp-for="@Model.usercontact.UserName">
+        <span class="text-danger" asp-validation-for="usercontact.UserName"></span>
     </div>
 
     <button class="btn btn-danger" type="submit">Gửi</button>
@@ -36,9 +36,9 @@
 <div class="alert alert-danger">
     <p>Thong tin User</p>
     <ul>
-        <li>UserID: @Model.UserId</li>
-        <li>Email: @Model.Email</li>
-        <li>UserName: @Model.UserName</li>
+        <li>UserID: @Model.usercontact.UserId</li>
+        <li>Email: @Model.usercontact.Email</li>
+        <li>UserName: @Model.usercontact.UserName</li>
     </ul>
 
 </div>

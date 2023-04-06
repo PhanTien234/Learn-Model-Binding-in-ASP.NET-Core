@@ -1,22 +1,13 @@
-
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 public class ContactRequestModel : PageModel{
+    
     [BindProperty]
-    [DisplayName("Id cua ban")]
-    [Range(10,100, ErrorMessage = "Nhap sai")]
-    public int UserId {get;set;}
-    [BindProperty]
-    [DisplayName("Email cua ban")]
-    [EmailAddress(ErrorMessage ="Email sai dinh dang")]
-    public string Email {get;set;}
-    [BindProperty]
-    [DisplayName("Ten nguoi dung")]
-    public string UserName {get; set;}
-
+    public UserContact usercontact {set;get;}
     private readonly ILogger<ContactRequestModel> _logger;
     public ContactRequestModel(ILogger<ContactRequestModel> logger){
         _logger = logger;
@@ -29,6 +20,6 @@ public class ContactRequestModel : PageModel{
     }
 
     public void OnPost(){
-        Console.WriteLine(this.Email);
+        Console.WriteLine(this.usercontact.Email);
     }
 }
