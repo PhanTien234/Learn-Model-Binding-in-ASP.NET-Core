@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 public class ContactRequestModel : PageModel{
     [BindProperty(SupportsGet = true)]
-    public string UsedId {get;set;}
+    public string UserId {get;set;}
     [BindProperty]
     public string Email {get;set;}
-    [BindProperty]
+    [BindProperty(SupportsGet = true)]
     public string UserName {get; set;}
 
     private readonly ILogger<ContactRequestModel> _logger;
